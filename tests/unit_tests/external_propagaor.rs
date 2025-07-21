@@ -16,7 +16,7 @@ impl ExternalPropagator for MyExternalPropagator {
     fn notify_backtrack(&mut self, _: usize) {
         todo!()
     }
-    fn cb_check_found_model(&self, _: &[i32]) -> bool {
+    fn cb_check_found_model(&mut self, _: &[i32]) -> bool {
         true // sat
     }
     fn cb_has_external_clause(&self, _: &mut bool) -> bool {
