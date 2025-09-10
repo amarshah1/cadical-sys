@@ -1579,7 +1579,7 @@ pub trait ExternalPropagator {
 
     /// Ask the external propagator for the next decision literal. If it
     /// returns 0, the solver makes its own choice.
-    fn cb_decide(&self) -> i32 {
+    fn cb_decide(&mut self) -> i32 {
         0
     }
 
@@ -1587,7 +1587,7 @@ pub trait ExternalPropagator {
     /// under the current assignment. It returns either a literal to be
     /// propagated or 0, indicating that there is no external propagation under
     /// the current assignment.
-    fn cb_propagate(&self) -> i32 {
+    fn cb_propagate(&mut self) -> i32 {
         0
     }
 
